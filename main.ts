@@ -1,3 +1,4 @@
+
 export function add(a: number, b: number): number {
   return a + b;
 }
@@ -8,5 +9,6 @@ if (import.meta.main) {
 }
 
 Deno.serve((req) => {
-  return new Response("Hello World");
+  return new Response(`Hello World ${req.url}`);
 });
+
